@@ -17,7 +17,7 @@ def apache_service():
         system_status = subprocess.check_output(['systemctl','status','apache2']).decode().strip()
         print(system_status)
 
-    elif service_code == 1:
+    elif service_code == 0:
         service_status = subprocess.check_output(['service','apache2','status']).decode().strip()
         print(service_status)
 
